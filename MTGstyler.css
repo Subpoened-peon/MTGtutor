@@ -1,7 +1,60 @@
-#footer {
+#menu {
+	float: right;
+}
 
-	margin-top: 7px;
-	font-family: Helvetica;
-	text-align:left;
-	font-size: 9px;
+#title {
+
+	position: relative;
+	float: left;
+	font-size: 20px;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	color: darkred;
+
+}
+
+#default {
+
+	background-color: grey;
+
+}
+
+#text {
+
+	width:300px;
+	position: absolute;
+	top: 18%;
+	left: 50%;
+	transform: translate(-70%, -50%);
+
+}
+
+img {
+
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 15%;
+	height: 10%;
+
+}
+
+#nav {
+
+	background-color: darkblue;
+	color: whitesmoke;
+	padding: 0 5px;
+	font-size: 18px;
+	
+}
+
+#footer {
+	background-color: black;
+	color:whitesmoke;
+	text-align:center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 40px;
+	padding-top: 10px;
 }
