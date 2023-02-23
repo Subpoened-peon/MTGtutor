@@ -6,8 +6,13 @@
         NEWS
     </h1>
 
-    <div id = "content">
-
+    <div class = "news">
+    
+        <p> With the drop of the new set comes important dates! <br>
+            (news example)
+        </p>
+        <img src = "newex.jpg" />
+    
     </div>
 
 </body>

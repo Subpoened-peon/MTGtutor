@@ -9,13 +9,15 @@
                 <option value ="default">Where to...</option>
                 <option value="MTGtutorHome.php">HOME</option>
                 <option value="MTGnews.php">NEWS</option>
+                <option value="MTGhelp.php">HELP</option>
+                <option value="MTGregister.php">REGISTER</option>
             </select>
             
         </form>
 
     </div>
 <div style = "float: right; padding: 5px;">
-    <a href = "MTGlog.php">LOGIN</a>
+    <a href = "MTGlogin.php">LOGIN</a>
    
     </div>
 </html>

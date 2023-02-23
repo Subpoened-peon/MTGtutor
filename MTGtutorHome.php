@@ -4,29 +4,38 @@
  <head>
  <link rel="icon" type="image/x-icon" href="demfavicon.ico">
 </head>
-<body>
-    <div id = "title">
-        <h1 style= "text-align: center;">
+<body style="background-color: grey;">
+
+    <div class="background">
+    <img src= "MTGTUTOR.jpg" class= "img1"/>
+        <h1 id= "title">
      MTGtutor
         </h1>
     </div>
+    
+    <div>
+    <form id="text">
+    <label for= "search">
+        <a href = "MTGadvanced.php">Advanced</a></label>
+    <input type= "text" name="search" placeholder= "Search your library for...">
+</form>
+    </div>
+
 
     <div>
+       <p class = "content1"> Recently Viewed 
+        <img src = "gob.jpg" />
+        <img src = "domcon.jpg" />
+       </p>
 
-    <img src= "MTGTUTOR.jpg" />
-    <a href= "MTGadvanced.php" id = "text">Advanced</a>
-    <input type= "text" id="text" name="search" placeholder= "Search your library for...">
-
+       <p class = "content1"> Recently Added
+        <img src = "gob.jpg" />
+        <img src = "domcon.jpg" />
+       </p>
+       
     </div>
- <style>
-    body {
-        background-image: url("The Mindful back.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: 100% 45%;
-        background-color: grey;
-    }
-</style>
+
+    
 </body>
 </html>
 
