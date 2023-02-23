@@ -1,1 +1,1 @@
-<?php header( 'Location: /MTGtutorHome' ) ;  ?>
+<?php require_once("MTGhome.php"); ?>
