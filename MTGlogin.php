@@ -13,7 +13,7 @@
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
 
-    <a href = "MTGregister">Need to register?</a>
+    <a href = "MTGregister.php">Need to register?</a>
         
   </div>
 
