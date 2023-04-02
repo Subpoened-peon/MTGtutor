@@ -16,7 +16,7 @@ class DBconnect {
   public function searchName($name) {
     $conn = $this->getConnection();
     $searchQuery = 
-        "SELECT art,   FROM single WHERE name like '$name%'";
+        "SELECT art, name FROM single WHERE name like '$name%'";
     return $conn->query($searchQuery)->fetchAll(PDO::FETCH_ASSOC);
 
   }
