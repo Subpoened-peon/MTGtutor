@@ -11,8 +11,9 @@
         <br>
         have yet to be implemented.
         <br> <br>
-        Soon we will also have registration available and theres a nice login page too!
+        Registration open! Login Working! You can now search all white and some blue cards
         <br>
+        From Alpha!
         <br>
         In time this page, as well as the others, will be filled with dynamic content!
         <br>

@@ -14,10 +14,11 @@
     </div>
     
     <div>
-    <form id="text">
+    <form id="text" method="GET" action="MTGresults.php">
     <label for= "search">
         <a href = "MTGadvanced.php">Advanced</a></label>
     <input type= "text" name="search" placeholder= "Search your library for...">
+    <input type= "submit" value="Search" name="submit"></input>
 </form>
     </div>
 

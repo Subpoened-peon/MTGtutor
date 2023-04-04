@@ -1,8 +1,15 @@
 <?php require_once("MTGnav.php"); ?>
 
+<?php
+    if (isset($_GET['logout'])) {
+        session_destroy();
+        unset($_SESSION['username']);
+    }
+?>
+
 <html> 
  <head>
- <link rel="icon" type="image/x-icon" href="demfavicon.ico">
+    <link rel="icon" type="image/x-icon" href="demfavicon.ico">
 </head>
 <body style="background-color: grey;">
 

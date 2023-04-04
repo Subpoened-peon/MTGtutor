@@ -17,3 +17,4 @@ Results
 
 
 
+<?php include("footer.php"); ?>
