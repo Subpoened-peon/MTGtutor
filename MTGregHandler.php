@@ -1,6 +1,6 @@
 
 <?php
-require("DBconnect.php");
+require_once("DBconnect.php");
 session_start();
 
 $username = "";
