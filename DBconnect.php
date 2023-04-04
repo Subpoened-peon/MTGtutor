@@ -2,10 +2,10 @@
 //This is my Dao class
 class DBconnect {
 
-  $host = "us-cdbr-east-06.cleardb.net";
-  $user = "b7ec723fa75235";
-  $password = "f04e469c";
-  $db = "heroku_085a70428b0ee69";
+  private $host = "us-cdbr-east-06.cleardb.net";
+  private $user = "b7ec723fa75235";
+  private $password = "f04e469c";
+  private $db = "heroku_085a70428b0ee69";
 
   public function getConnection() {
     return
