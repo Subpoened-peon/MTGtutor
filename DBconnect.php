@@ -10,7 +10,7 @@ class DBconnect {
   public function getConnection() {
     return
         new PDO("mysql:host={$this->host};dbname={$this->db}", $this->user,
-            $this->pass);
+            $this->password);
   }
 
   public function searchName($name) {
