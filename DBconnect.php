@@ -2,16 +2,14 @@
 //This is my Dao class
 class DBconnect {
 
-  $url = parse_url(getenv("mysql://b7ec723fa75235:f04e469c@us-cdbr-east-06.cleardb.net/heroku_085a70428b0ee69?reconnect=true"));
-
-  $server = $url["host"];
-  $username = $url["user"];
-  $password = $url["pass"];
-  $db = substr($url["path"], 1);
+  $host = "us-cdbr-east-06.cleardb.net";
+  $user = "b7ec723fa75235";
+  $password = "f04e469c";
+  $db = "heroku_085a70428b0ee69";
 
   public function getConnection() {
     return
-        new PDO("mysql:host={$this->server};dbname={$this->db}", $this->user,
+        new PDO("mysql:host={$this->host};dbname={$this->db}", $this->user,
             $this->pass);
   }
 
