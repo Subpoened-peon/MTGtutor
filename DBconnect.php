@@ -1,5 +1,6 @@
 <?php
 //This is my Dao class
+require_once("Cleardb.env");
 class DBconnect {
 
   private $host = getenv('DB_HOST');
