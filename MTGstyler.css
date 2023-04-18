@@ -43,6 +43,10 @@
 
 }
 
+.login > .error {
+	color: #ff0000;
+}
+
 #title {
 
 	float: left;
