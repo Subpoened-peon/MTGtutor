@@ -1,6 +1,6 @@
 <?php
 //This is my Dao class
-include("/Users/nmerr/OneDrive/Documents/ia1/CONFIG.php");
+include("CONFIG.php");
 class DBconnect {
 
   private $host = HOST;
