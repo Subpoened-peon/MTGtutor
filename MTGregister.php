@@ -11,10 +11,10 @@
     <input type="text" placeholder="Enter Username. Max 20 characters, no _" name="uname" required value = <?php if(isset($_POST["uname"])) echo $_POST["uname"]; ?> >
 
     <label for="psw"><b>Password</b></label>
-    <input type="text" placeholder="Enter Password" name="psw" required value = <?php if(isset($_POST["psw"])) echo $_POST["psw"]; ?> >
+    <input type="password" placeholder="Enter Password" name="psw" required>
 
     <label for="psw"><b>Re-enter Password</b></label>
-    <input type="text" placeholder="Re-Enter Password" name="pswcheck" required>
+    <input type="password" placeholder="Re-Enter Password" name="pswcheck" required>
 
     <label for="email"><b>Please enter your email</b></label>
     <input type="text" placeholder="Email" name="email" required value = <?php if(isset($_POST["email"])) echo $_POST["email"]; ?> >

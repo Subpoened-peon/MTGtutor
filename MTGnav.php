@@ -11,7 +11,9 @@
                 <option value="MTGtutorHome.php">HOME</option>
                 <option value="MTGnews.php">NEWS</option>
                 <option value="MTGhelp.php">HELP</option>
+                <?php if(!isset($_SESSION['username'])) : ?>
                 <option value="MTGregister.php">REGISTER</option>
+                <?php endif ?>
             </select>
             
         </form>

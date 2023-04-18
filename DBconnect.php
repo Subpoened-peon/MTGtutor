@@ -1,16 +1,12 @@
 <?php
 //This is my Dao class
-require_once realpath(__DIR__ . "C:\wamp641\www\MTGtutor\Cleardb.env");
-use Dotenv\Dotenv;
-$dotenv = Dotenv::createImmutable(__DIR__);
-$dotenv->load();
-
+include("/Users/nmerr/OneDrive/Documents/ia1/CONFIG.php");
 class DBconnect {
 
-  private $host = $_ENV['DB_HOST'];
-  private $user = $_ENV['DB_USERNAME'];
-  private $password = $_ENV['DB_PASSWORD'];
-  private $db = $_ENV['DB_DATABASE'];
+  private $host = HOST;
+  private $user = USER;
+  private $password = PASSWORD;
+  private $db = DB;
 
   public function getConnection() {
     return
