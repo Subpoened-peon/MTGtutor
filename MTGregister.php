@@ -6,7 +6,7 @@
 <body id = "default">
 
 <div class="login">
-    <form method="POST" action="MTGregister.php">
+    <form method="POST" action="MTGregister.php" name="registration">
     <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username. Max 20 characters, no _" name="uname" required value = <?php if(isset($_POST["uname"])) echo $_POST["uname"]; ?> >
 
@@ -25,5 +25,6 @@
 </div>
 
 </body>
+
 
 <?php include("footer.php"); ?>

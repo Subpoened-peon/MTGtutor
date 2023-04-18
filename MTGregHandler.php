@@ -28,21 +28,16 @@ if (isset($_POST['new_user'])) {
     array_push($errors, "Invalid Email");
   }
 
-  if (count($errors) == 0) {
+  
     $user = $db->searchUser($username, $email);
     if ($user) { 
-      if ($user['UserName'] === $username) {
         array_push($errors, "Username already exists");
-      }
-  
-      if ($user['email'] === $email) {
-          array_push($errors, "email already exists");
-        }
      }
-  }
+  
 
    if (count($errors) == 0) {
-    $db->registerUser($username, $password_1, $email);
+    $hash = md5($password_1);
+    $db->registerUser($username, $hash, $email);
 
     $_SESSION['username'] = $username;
   	$_SESSION['success'] = "You are now logged in";
@@ -59,9 +54,10 @@ if (isset($_POST['new_user'])) {
     if (empty($password)) {
       array_push($errors, "Password is required");
     }
-
+      
     if (count($errors) == 0) {
-      $user = $db->loginUser($username, $password);
+      $hash = md5($password);
+      $user = $db->loginUser($username, $hash);
       if(!empty($user)) {
         $_SESSION['username'] = $username;
   	    $_SESSION['success'] = "You are now logged in";
