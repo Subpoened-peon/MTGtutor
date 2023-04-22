@@ -2,11 +2,11 @@
 
 <html>
     <head>
-     <link rel="stylesheet" href="MTGstyles.css">
+     <link rel="stylesheet" href="MTGstyler.css">
     </head>
     <div style = "float: right;">
     <form>
-            <select id="nav" onChange= "window.location.href=this.value">
+            <select title="Navigation" id="nav" onChange= "window.location.href=this.value">
                 <option> Where to </option>
                 <option value="MTGtutorHome.php">HOME</option>
                 <option value="MTGnews.php">NEWS</option>

@@ -17,14 +17,14 @@ class DBconnect {
   public function searchName($name) {
     $conn = $this->getConnection();
     $searchQuery = 
-        "SELECT art, name FROM single WHERE name like '$name%'";
+        "SELECT * FROM login WHERE UserName = '$name'";
     return $conn->query($searchQuery)->fetchAll(PDO::FETCH_ASSOC);
 
   }
 
   public function searchUser($username, $email) {
     $conn = $this->getConnection();
-    $searchQuery = "SELECT * FROM login WHERE UserName='$username' OR Email='$email' LIMIT 1";
+    $searchQuery = "SELECT * FROM login WHERE UserName='$username' AND Email='$email' LIMIT 1";
     return $conn->query($searchQuery)->fetchAll(PDO::FETCH_ASSOC);
   }
 

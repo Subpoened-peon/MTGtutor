@@ -152,3 +152,11 @@
 	background-repeat: no-repeat;
 
 }
+
+.error-msg {
+    background-color: #ffcccc;
+    color: #ff0000;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: none;
+  }

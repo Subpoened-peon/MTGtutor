@@ -1,7 +1,8 @@
 <?php require_once("MTGnav.php"); ?>
 
-<html> 
+<html lang="en"> 
  <head>
+ <script src="prototype.js" type="text/javascript"></script>
  <link rel="icon" type="image/x-icon" href="demfavicon.ico">
 </head>
 <body style="background-color: grey;">
