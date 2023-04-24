@@ -99,7 +99,7 @@ if (isset($_POST['new_user'])) {
   }
 
   
-    $user = $db->searchName($username);
+    $user = $db->searchUser($username);
     if (count($user) > 0) { 
           array_push($errors, "Username already exists");      
      }
