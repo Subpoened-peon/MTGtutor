@@ -17,7 +17,7 @@ class DBconnect {
   public function searchName($name) {
     $conn = $this->getConnection();
     $searchQuery = 
-        "SELECT * FROM login WHERE UserName = '$name'";
+        "SELECT * FROM single WHERE name LIKE '$name%'";
     return $conn->query($searchQuery)->fetchAll(PDO::FETCH_ASSOC);
 
   }
