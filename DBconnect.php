@@ -22,9 +22,9 @@ class DBconnect {
 
   }
 
-  public function searchUser($username, $email) {
+  public function searchUser($username) {
     $conn = $this->getConnection();
-    $searchQuery = "SELECT * FROM login WHERE UserName='$username' AND Email='$email' LIMIT 1";
+    $searchQuery = "SELECT * FROM login WHERE UserName='$username' LIMIT 1";
     return $conn->query($searchQuery)->fetchAll(PDO::FETCH_ASSOC);
   }
 
