@@ -1,6 +1,5 @@
 <?php require_once("MTGnav.php"); ?>
 <?php require_once("DBconnect.php"); ?>
-<?php require_once("errors.php"); ?>
 <?php require_once("MTGregHandler.php") ?>
 
 <head>
@@ -25,6 +24,7 @@
     <button type="submit" value="Submit" name="new_user">Register</button>
     <label>
 </form>
+<div id="error-container"></div>
 </div>
 
 </body>

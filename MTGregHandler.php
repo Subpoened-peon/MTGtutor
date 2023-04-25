@@ -12,8 +12,6 @@ jQuery(document).ready(function() {
 
     if (uname.length < 4) {
       errors.push('Please enter a valid username');
-    } else {
-
     }
 
     if (psw.length < 1) {
@@ -26,6 +24,10 @@ jQuery(document).ready(function() {
 
     if (email.length < 1) {
       errors.push('Please enter an email');
+    }
+
+    if (!/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(email)) {
+      errors.push('Invalid Email');
     }
 
     if (errors.length > 0) {
@@ -54,14 +56,11 @@ jQuery(document).ready(function() {
   });
 
   function showError(errorMessage) {
-   
-   $('#error-msg').remove();
-   var errorElement = $('<div id="error-msg" class="error-msg">').html(errorMessage);
-   $('.login').prepend(errorElement);
-
+   clearError();
+   $('#error-container').append('<div id="error-message">' + errorMessage + '</div>');
   
    setTimeout(function() {
-       $('#error-msg').fadeOut(500, function() {
+       $('#error-message').fadeOut(500, function() {
            $(this).remove();
        });
    }, 3000);
@@ -69,7 +68,7 @@ jQuery(document).ready(function() {
 
 function clearError() {
    
-   $('#error-msg').remove();
+   $('#error-message').remove();
 }
 
 });
@@ -91,12 +90,6 @@ if (isset($_POST['new_user'])) {
   $username = $_POST['uname'];
   $password_1 = $_POST['psw'];
   $email = $_POST['email'];
-
-   
-  
-  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    array_push($errors, "Invalid Email");
-  }
 
   
     $user = $db->searchUser($username);
