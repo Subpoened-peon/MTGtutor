@@ -3,6 +3,7 @@
 <html>
     <head>
      <link rel="stylesheet" href="MTGstyler.css">
+     <link rel="shortcut icon" type="image/x-icon" href="demfavicon.ico">
     </head>
     <div style = "float: right;">
     <form>

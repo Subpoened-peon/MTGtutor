@@ -6,15 +6,17 @@ require_once("MTGwidgets.php");
 $search = $_GET['search'];
 
 ?>
-
-Results
-
+<title>Results</title>
+<body id = "default">
+<h1>Results</h1>
+<div id="result">
 <?php
     $conn = new DBconnect();
     $results = $conn->searchName($search);
     echo MTGwidgets::renderResults($results);
 ?>
+<br><br>
+</div>
 
-
-
+</body>
 <?php include("footer.php"); ?>

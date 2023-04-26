@@ -6,8 +6,13 @@
            foreach($results as $row) {
             $art = $row['art'];
             $name = $row['name'];
-            $html = "<img src='{$art}'/>";
-            $html .= "<br> $name";
+            $rules = $row['rules'];
+            $type = $row['type_desc'];
+            $html = "<div class='card'>
+                <div class='card-image' style='background-image: url({$art})'></div>
+                <div class='card-name'>$name</div>
+                <div class='card-rules'>Card type = $type<br><br>$rules</div>
+              </div>";
             echo $html;
            }
         }

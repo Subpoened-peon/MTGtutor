@@ -17,7 +17,7 @@ class DBconnect {
   public function searchName($name) {
     $conn = $this->getConnection();
     $searchQuery = 
-        "SELECT * FROM single WHERE name LIKE '$name%'";
+        "SELECT * FROM single inner join cardtypes on single.type_id = cardtypes.type_id where name like '$name%';";
     return $conn->query($searchQuery)->fetchAll(PDO::FETCH_ASSOC);
 
   }

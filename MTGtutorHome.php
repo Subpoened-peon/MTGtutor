@@ -4,13 +4,15 @@
     if (isset($_GET['logout'])) {
         session_destroy();
         unset($_SESSION['username']);
+        header("Location: MTGtutorHome");
         
     }
 ?>
 
 <html> 
  <head>
-    <link rel="icon" type="image/x-icon" href="demfavicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="demfavicon.ico">
+    <title>Home</title>
 </head>
 <body style="background-color: grey;">
 

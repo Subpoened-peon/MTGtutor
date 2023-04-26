@@ -1,5 +1,4 @@
 <?php require_once("MTGnav.php"); ?>
-<?php require_once("errors.php"); ?>
 <?php require_once("MTGregHandler.php"); ?>
 <body id = "default">
 
