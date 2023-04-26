@@ -16,13 +16,13 @@
 
 	display: block;
 	background-color: bisque;
-	height: 75%;
+	height: 80%;
 	width:80%;
 	margin: 0 auto;
 	padding-top: -40px;
 	clear: both;
 	border: 1px solid black;
-
+	font-size: 12px;
 }
 
 .login > input[type=text] {
@@ -51,11 +51,11 @@
 
 #title {
 
-	float: left;
-	margin: -75 auto;
+	left: 25%;
+	
 	font-size: 40px;
 
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-family: 'Risque', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	color: darkred;
 
 }
@@ -63,6 +63,7 @@
 #default {
 
 	background-color: grey;
+	border: solid 1px darkgray;
 	
 }
 
@@ -115,12 +116,15 @@
 
 .img1 {
 
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 15%;
-	height: 10%;
-
+	position: absolute;
+        top: 21%;
+        left: 40%;
+        width: 18%;
+        height: 15%;
+		max-height: 85;
+		max-width: 125;
+        z-index: 9999;
+		
 }
 
 

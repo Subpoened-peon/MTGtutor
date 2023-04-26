@@ -17,13 +17,13 @@
 <body style="background-color: grey;">
 
     <div class="background">
-    <img src= "MTGTUTOR.jpg" class= "img1"/>
         <h1 id= "title">
      MTGtutor
         </h1>
     </div>
     
     <div>
+    <img src= "MTGTUTOR.jpg" class= "img1"/>
     <form id="text" method="GET" action="MTGresults.php">
     <label for= "search">
         <a href = "MTGadvanced.php">Advanced</a></label>

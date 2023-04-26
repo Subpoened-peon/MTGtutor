@@ -7,9 +7,9 @@
     <p style = "text-align: center;">
         Hey there! at the top right you'll find a very useful navigation menu.
         <br>
-        Home will take you to the main search bar and some other things that
+        The Home page has a search engine that searches for card names that start with whatever you enter!
         <br>
-        have yet to be implemented.
+        New to the game? click <a href = "https://magic.wizards.com/en/rules">HERE</a> for the rules!
         <br> <br>
         Registration open! Login Working! You can now search all white and some blue cards
         <br>
