@@ -31,6 +31,38 @@ class DBconnect {
     return $numRows > 0 ? 1 : 0;
   }
 
+  public function advancedSearch($cardName, $cardType, $cardCost, $cardRule, $cardSet, $cardRarity, $cardColors) {
+    
+    $conn = $this->getConnection();
+
+    $sql = "SELECT * FROM single ";
+    $where = "WHERE name like '$cardName%' ";
+    $sql .= "Join cardtypes on single.type_id = cardtypes.type_id ";
+    if (!empty($cardType)) {
+       $where .= "AND type_desc = '$cardType' ";
+    }
+    if (!empty($cardCost)) {
+        $where .= "AND cost = '$cardCost' ";
+    }
+    if (!empty($cardRule)) {
+        $where = "AND rules like '$cardRule' ";
+    }
+    if (!empty($cardSet)) {
+      $sql .= "INNER Join cardset on single.set_id = cardset.set_id ";
+      $where .= "AND set_desc = '$cardSet' ";
+    }
+    if (!empty($cardRarity)) {
+      $where .= "AND rarity = '$cardRarity' ";
+    }
+    if (!empty($cardColors)) {
+      $sql .= "INNER Join color_identity on single.color_id = color_identity.color_id ";
+      $where .= "AND color_desc like '$cardColors' ";
+    }
+    $sql .= $where . ";";
+    echo $sql;
+    return $conn->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+}
+
   public function registerUser($user, $pass, $email) {
     $conn = $this->getConnection();
     $q = $conn->prepare("INSERT INTO login

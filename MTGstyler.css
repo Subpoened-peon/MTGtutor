@@ -67,6 +67,13 @@
 	
 }
 
+#advdefault {
+	background-image: url("symbols/thought.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+}
+
 .content1 {
 	text-align:center;
 	display: flex;
@@ -207,5 +214,12 @@
 	background-color: black;
 	padding: 14px;
 	margin-bottom: 100px;
+}
+
+#advanced {
+	text-align: center;
+	font-family: 'Risque', sans-serif;
+	color: red;
+	font-size: 28px;
 }
 
