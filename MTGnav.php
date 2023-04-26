@@ -7,17 +7,17 @@
     </head>
     <div style = "float: right;">
     <form>
-            <select title="Navigation" id="nav" onChange= "window.location.href=this.value">
-                <option> Where to </option>
-                <option value="MTGtutorHome.php">HOME</option>
-                <option value="MTGnews.php">NEWS</option>
-                <option value="MTGhelp.php">HELP</option>
-                <?php if(!isset($_SESSION['username'])) : ?>
-                <option value="MTGregister.php">REGISTER</option>
-                <?php endif ?>
-            </select>
+        <select title="Navigation" id="nav" onChange= "window.location.href=this.value">
+            <option> Where to </option>
+            <option value="MTGtutorHome.php">HOME</option>
+            <option value="MTGnews.php">NEWS</option>
+            <option value="MTGhelp.php">HELP</option>
+            <?php if(!isset($_SESSION['username'])) : ?>
+            <option value="MTGregister.php">REGISTER</option>
+            <?php endif ?>
+        </select>
             
-        </form>
+    </form>
 
     </div>
 <div style = "float: right; padding: 5px;">
