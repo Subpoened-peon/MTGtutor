@@ -24,8 +24,11 @@ class DBconnect {
 
   public function searchUser($username) {
     $conn = $this->getConnection();
+    console.log("Searching for user:", $username);
     $searchQuery = "SELECT * FROM login WHERE UserName='$username' LIMIT 1";
-    return $conn->query($searchQuery)->fetchAll(PDO::FETCH_ASSOC);
+    $result = $conn->query($searchQuery);
+    $numRows = $result->rowCount();
+    return $numRows > 0 ? 1 : 0;
   }
 
   public function registerUser($user, $pass, $email) {

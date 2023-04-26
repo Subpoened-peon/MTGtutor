@@ -12,7 +12,7 @@ jQuery(document).ready(function() {
 
     if (uname.length < 4) {
       errors.push('Please enter a valid username');
-    }
+    } 
 
     if (psw.length < 1) {
       errors.push('Please enter a password');
@@ -30,6 +30,8 @@ jQuery(document).ready(function() {
       errors.push('Invalid Email');
     }
 
+
+
     if (errors.length > 0) {
       showError(errors.join('<br>'));
 
@@ -45,7 +47,7 @@ jQuery(document).ready(function() {
         },
         success: function(response) {
           console.log(response);
-    
+          window.location.href = "MTGtutorHome.php";
         },
         error: function(jqXHR, textStatus, errorThrown) {
           console.log(textStatus, errorThrown);
@@ -90,50 +92,37 @@ if (isset($_POST['new_user'])) {
   $username = $_POST['uname'];
   $password_1 = $_POST['psw'];
   $email = $_POST['email'];
-
   
-    $user = $db->searchUser($username);
-    if (count($user) > 0) { 
-          array_push($errors, "Username already exists");      
-     }
-  
-
-   if (count($errors) == 0) {
     $hash = md5($password_1);
     $db->registerUser($username, $hash, $email);
    
 
     $_SESSION['username'] = $username;
     $_SESSION['success'] = "You are now logged in";
-    header('Location: MTGtutorHome.php');
+    header('Location: MTGtutorHome.php');   
+  
+}
 
-   
-   } else {
-    
-    header('Location: MTGregister.php');
-    
-   }
+if (isset($_POST['login_user'])) {
+  $username = $_POST['uname'];
+  $password = $_POST['psw'];
+
+  if (empty($username)) {
+    array_push($errors, "Username is required");
   }
-   if (isset($_POST['login_user'])) {
-    $username = $_POST['uname'];
-    $password = $_POST['psw'];
-
-    if (empty($username)) {
-      array_push($errors, "Username is required");
-    }
-    if (empty($password)) {
-      array_push($errors, "Password is required");
-    }
+  if (empty($password)) {
+    array_push($errors, "Password is required");
+  }
       
-    if (count($errors) == 0) {
-      $hash = md5($password);
-      $user = $db->loginUser($username, $hash);
-      if(!empty($user)) {
-        $_SESSION['username'] = $username;
-  	    $_SESSION['success'] = "You are now logged in";
-  	    header('location: MTGtutorHome.php');
+  if (count($errors) == 0) {
+    $hash = md5($password);
+    $user = $db->loginUser($username, $hash);
+    if(!empty($user)) {
+      $_SESSION['username'] = $username;
+  	  $_SESSION['success'] = "You are now logged in";
+  	  header('location: MTGtutorHome.php');
       } else {
-        array_push($errors, "Wrong username/password combination");
-      	}
+      array_push($errors, "Wrong username/password combination");
       }
     }
+  }
