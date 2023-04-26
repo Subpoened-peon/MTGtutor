@@ -59,7 +59,6 @@ class DBconnect {
       $where .= "AND color_desc like '$cardColors' ";
     }
     $sql .= $where . ";";
-    echo $sql;
     return $conn->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 }
 
