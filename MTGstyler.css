@@ -23,6 +23,7 @@
 	clear: both;
 	border: 1px solid black;
 	font-size: 12px;
+	font-family: 'Risque', sans-serif;
 }
 
 .login > input[type=text] {
