@@ -19,3 +19,4 @@ zip -r "${OUTPUT_DIR}/MTGtutor.zip" .
 echo "Extension package created: ${OUTPUT_DIR}/MTGtutor.zip"
 
 exit 127
+# testing .yml file
