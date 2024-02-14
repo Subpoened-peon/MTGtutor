@@ -10,7 +10,7 @@ mkdir -p "${OUTPUT_DIR}"
 cd "${SOURCE_DIR}" || exit
 
 # Build the Docker image
-docker build -t "${DOCKER_IMAGE_NAME}" .
+podman build -t "${DOCKER_IMAGE_NAME}" .
 
 # Create a zip file for the extension (optional)
 zip -r "${OUTPUT_DIR}/MTGtutor.zip" .
