@@ -14,5 +14,7 @@ WORKDIR /app
 # Copy the application files into the container
 COPY . .
 
+RUN chmod +x build.sh
+
 # Define the command to run when the container starts
 CMD ["bash"]
