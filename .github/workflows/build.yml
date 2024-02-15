@@ -16,6 +16,4 @@ jobs:
         run: podman build -t mtgtutor:1.0 .
 
       - name: Run build.sh
-        run: | 
-          chmod +x build.sh
-          podman run mtgtutor:1.0 bash -c "./build.sh"
+        run: podman run mtgtutor:1.0 bash -c "./build.sh"
