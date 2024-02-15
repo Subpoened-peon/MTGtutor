@@ -6,7 +6,7 @@ RUN npm install -g eslint stylelint htmlhint jsonlint
 
 # Install OpenSSL
 RUN apt-get update && \
-    apt-get install -y openssl
+    apt-get install -y openssl zip
 
 # Set the working directory in the container
 WORKDIR /app
