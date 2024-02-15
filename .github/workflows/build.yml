@@ -17,6 +17,7 @@ jobs:
           node-version: '20.x'
 
       - name: Execute build script
-        run: |
-          chmod +x build.sh
-          ./build.sh
+        run: podman build -t MTGtutor:1.0 .
+           |
+            chmod +x build.sh
+            podman run MTGtutor:1.0 ./build.sh
